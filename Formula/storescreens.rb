@@ -1,8 +1,8 @@
 class Storescreens < Formula
   desc "Capture App Store screenshots for iOS and macOS apps across every device size"
   homepage "https://github.com/ciscoriordan/storescreens-cli"
-  url "https://github.com/ciscoriordan/storescreens-cli/releases/download/v2.4.1/storescreens-v2.4.1-macos.tar.gz"
-  sha256 "4c56a10aa4d42b8975434894d7550b5aa5634cbc0da168794edd4b62a4a866b7"
+  url "https://github.com/ciscoriordan/storescreens-cli/releases/download/v2.4.2/storescreens-v2.4.2-macos.tar.gz"
+  sha256 "1c52bf0ff876bf27983715249491e9e11193e9156e0efc4e8f71baaef3828f85"
   license "MIT"
 
   depends_on arch: :arm64
@@ -15,6 +15,6 @@ class Storescreens < Formula
   end
 
   test do
-    assert_match "2.4.1", shell_output("#{bin}/storescreens --version")
+    assert_match "2.4.2", shell_output("#{bin}/storescreens --version")
   end
 end
