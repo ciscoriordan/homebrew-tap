@@ -12,6 +12,10 @@ class Storescreens < Formula
   def install
     bin.install "storescreens"
     bin.install "storescreens-mcp"
+    # SwiftPM resource bundle (laurel SVGs etc.). Bundle.module looks
+    # for it next to the executable at runtime, so it has to live in
+    # bin/ alongside the binaries.
+    bin.install "storescreens-cli_StorescreensCore.bundle"
   end
 
   test do
