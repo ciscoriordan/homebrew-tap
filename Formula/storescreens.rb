@@ -6,7 +6,6 @@ class Storescreens < Formula
   license "MIT"
 
   depends_on arch: :arm64
-  depends_on :macos
   depends_on macos: :sonoma
 
   def install
