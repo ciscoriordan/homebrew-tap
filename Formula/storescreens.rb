@@ -1,21 +1,21 @@
 class Storescreens < Formula
-  desc "Capture App Store screenshots for iOS and macOS apps across every device size"
+  desc "Set up simulators, run XCUITests, and collect raw screenshots"
   homepage "https://github.com/ciscoriordan/storescreens-cli"
-  url "https://github.com/ciscoriordan/storescreens-cli/releases/download/v3.13.4/storescreens-v3.13.4-macos.tar.gz"
-  sha256 "963cf8eab8609e811ce73033815bf2c475606adf0a532820123bcb03b9e91d97"
+  url "https://github.com/ciscoriordan/storescreens-cli/releases/download/v4.0.0/storescreens-v4.0.0-macos.tar.gz"
+  sha256 "f5660685c75eeb4de2a2bd76c4ee57133a7872df3c18f31fe594e23c0b5e8559"
   license "MIT"
-
-  deprecate! date: "2026-10-20", because: "was retired; use Koubou and App Store Connect CLI instead"
 
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
   def install
-    bin.install "storescreens"
-    bin.install "storescreens-mcp"
+    libexec.install Dir["*"]
+    bin.write_exec_script libexec/"storescreens"
+    bin.write_exec_script libexec/"storescreens-mcp"
   end
 
   test do
-    assert_match "3.13.4", shell_output("#{bin}/storescreens --version")
+    assert_match "4.0.0", shell_output("#{bin}/storescreens --version")
+    assert_match "XCTAttachment", shell_output("#{bin}/storescreens setup --print-template")
   end
 end
