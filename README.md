@@ -6,14 +6,15 @@ Homebrew tap for [@ciscoriordan](https://github.com/ciscoriordan)'s command-line
 
 ```bash
 brew tap ciscoriordan/tap
-brew install storescreens
 ```
 
 ## Formulae
 
 | Formula | Description |
 |---------|-------------|
-| [`storescreens`](Formula/storescreens.rb) | Capture iOS simulator screenshots for every App Store device size. ([repo](https://github.com/ciscoriordan/storescreens-cli)) |
+| [`storescreens`](Formula/storescreens.rb) | Retired October 20, 2026. Kept for existing installations and historical releases. ([archive](https://github.com/ciscoriordan/storescreens-cli)) |
+
+For new screenshot workflows, use [Koubou](https://github.com/bitomule/Koubou) for composition and rendering, and [App Store Connect CLI](https://asccli.sh/) for uploads and release management. The StoreScreens formula displays a deprecation warning; no further releases are planned.
 
 ## License
 

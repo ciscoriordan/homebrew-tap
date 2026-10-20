@@ -5,6 +5,8 @@ class Storescreens < Formula
   sha256 "963cf8eab8609e811ce73033815bf2c475606adf0a532820123bcb03b9e91d97"
   license "MIT"
 
+  deprecate! date: "2026-10-20", because: "was retired; use Koubou and App Store Connect CLI instead"
+
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
