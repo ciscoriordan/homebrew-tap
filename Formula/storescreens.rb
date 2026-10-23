@@ -1,8 +1,8 @@
 class Storescreens < Formula
   desc "Set up simulators, run XCUITests, and collect raw screenshots"
   homepage "https://github.com/ciscoriordan/storescreens-cli"
-  url "https://github.com/ciscoriordan/storescreens-cli/releases/download/v4.1.0/storescreens-v4.1.0-macos.tar.gz"
-  sha256 "2ec9c9d8e2ec5a005d8b384d317b79f4be7986d04381c2918d089732aefeb59c"
+  url "https://github.com/ciscoriordan/storescreens-cli/releases/download/v4.1.1/storescreens-v4.1.1-macos.tar.gz"
+  sha256 "0fb91c65602a2d53740e82197ee95be0eeaf37314d31d403b2b2ba9baca48dd6"
   license "MIT"
 
   depends_on arch: :arm64
@@ -15,7 +15,7 @@ class Storescreens < Formula
   end
 
   test do
-    assert_match "4.1.0", shell_output("#{bin}/storescreens --version")
+    assert_match "4.1.1", shell_output("#{bin}/storescreens --version")
     assert_match "XCTAttachment", shell_output("#{bin}/storescreens setup --print-template")
   end
 end
